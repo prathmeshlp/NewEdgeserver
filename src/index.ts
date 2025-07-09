@@ -5,7 +5,9 @@ import productRoutes from './routes/productRoutes';
 import { config } from './config';
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: config.clientUri,
+  }));
 app.use(express.json());
 
 mongoose.connect(config.mongodbUri)
