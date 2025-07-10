@@ -7,7 +7,7 @@ import { config } from "./config";
 const app = express();
 app.use(
   cors({
-    origin: config.clientUri,
+    origin:"*",
   })
 );
 app.use(express.json());
