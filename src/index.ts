@@ -24,5 +24,5 @@ app.listen(config.port, () =>
 );
 
 app.get("/", (req, res) => {
-  res.json({ message: `Server running on port ${config.port}` });
+  res.send("Api is running");
 });
